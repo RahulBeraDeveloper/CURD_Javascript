@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/x-icon" href="images/fav-icon.png">
+    <title>Health Plus System</title>
+   
+</head>
+<body>
+    <div class="header">
+        <h5>Patient Portal</h5><span>
+            <img src="images/medical-12.png" height="40px" width="50px">
+        </span>
+        
+    </div>
+    <div class="upper-btn-box">
+        <div class="left-box">
+            <button id="add-btn"  ><i class="fa-solid fa-plus" ></i> &nbsp;Add Patient</button>
+            <button  id ="del-all-btn"><i class="fa-solid fa-eraser"></i> &nbsp; clear</button>
+            <input type="checkbox" name="" id="del-all-box">
+        </div>
+        <div class="right-box">
+           <i class="fa fa-search"></i>
+           <input type="text" id="empId" placeholder="Enter patient id or name">
+           <button>Search</button>
+           <!-- <i id ="mode-toggle" class="fa fa-sun"></i> -->
+        </div>
+    </div>
+    <div class="table-box">
+        <table >
+            <tr>
+                <th >&nbsp;&nbsp;Id&nbsp;&nbsp;</th>
+                <th> Full Name  </th>
+                <th>&nbsp;Gender&nbsp;</th>
+                <th>Appointment Date</th>
+               <th>Appointment Time</th>
+                <th>E-mail</th>
+                <th>Phone no.</th>
+                <th>Disease</th>
+                <th>Doctor</th>
+                <th>&nbsp;Action &nbsp;</th>
+            </tr>
+            <tbody id="table-data">
+
+            </tbody>
+        </table>
+    </div>
+   
+    <div class="modal">
+        <i class="fa fa-times-circle close-icon"></i>
+     
+        <div class="center-modal">
+         <form id="register-Form" method="post">
+            <div class="input-box">
+                <label for="id">Id</label>
+                <input type="number" id="id" required/>
+            </div>
+            <div class="input-box">
+                <label for="fullname">FullName</label>
+                <input type="type" id="fullname" required/>
+            </div>
+            <div class="input-box">
+                <label for="DOM">Gender</label>
+                <select id="gender">
+                 <option>Select Gender</option>
+                 <option>Male</option>
+                 <option>Female</option>
+                 <option>Other</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="DOM">Appointment Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="input-box">
+                <label for="time">Appointment Time</label>
+                <input type="time" id="time" required>
+            </div>
+           
+            <div class="input-box">
+                <label for="email">E-mail</label>
+                <input type="email" id="email"  required/>
+                <div class="email-message">
+                    
+                </div>
+             
+            </div>
+           
+            <div class="input-box">
+                <label for="phone-no">phone-no.</label>
+                <input type="number" id="phoneNum">
+            </div>
+            <div class="input-box">
+                <label for="diagnose">Disease</label>
+                <input type="text" id="diagnose" required/>
+            </div>
+            <div class="input-box">
+                <label for="doctor">Doctor</label>
+                <input type="text" id="doctor" required/>
+            </div>
+            <div class="input-box">
+                <button id="register-btn" >Save</button>
+                <button id="update-btn" disabled="disabled">Edit</button>
+            </div>
+            
+         </form>
+        
+        </div>
+    
+    </div>
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>     
+ 
